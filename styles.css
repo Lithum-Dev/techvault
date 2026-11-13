@@ -1,0 +1,406 @@
+
+/* =========================================
+   TECHVAULT - MODERN TECHNOLOGY MAGAZINE
+   ========================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* 1. CSS VARIABLES */
+:root {
+    --background: #080d18;
+    --surface: #101a2b;
+    --surface-light: #17243a;
+    --primary: #00aaff;
+    --primary-light: #48c6ff;
+    --text: #f1f5f9;
+    --text-muted: #a5b4c8;
+    --border: rgba(255, 255, 255, 0.09);
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* 2. GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 3. HEADER */
+header {
+    background: rgba(8, 13, 24, 0.95);
+    padding: 25px 8%;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: var(--primary);
+    text-shadow: 0 0 25px rgba(0, 170, 255, 0.35);
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 5px 0 22px;
+    letter-spacing: 1px;
+}
+
+/* 4. NAVIGATION */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+header nav a:hover {
+    color: white;
+    background: var(--surface-light);
+}
+
+/* 5. MAIN CONTENT */
+main {
+    width: min(1150px, 84%);
+    margin: 60px auto;
+}
+
+section {
+    margin-bottom: 75px;
+    scroll-margin-top: 30px;
+}
+
+section > h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-left: 18px;
+    border-left: 5px solid var(--primary);
+}
+
+section > p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* 6. ARTICLE CARDS */
+article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 170, 255, 0.5);
+}
+
+article h3 {
+    font-size: 1.35rem;
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+article p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* 7. IMAGES */
+figure {
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+figure img {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+figure:hover img {
+    transform: scale(1.035);
+}
+
+figcaption {
+    background: var(--surface-light);
+    color: var(--text-muted);
+    padding: 12px 15px;
+    font-size: 0.82rem;
+}
+
+/* 8. ARTICLE LINKS */
+article a {
+    display: inline-block;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 8px;
+    transition: 0.3s ease;
+}
+
+article a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+time {
+    display: inline-block;
+    color: var(--primary-light);
+    font-size: 0.82rem;
+    margin: 5px 0 12px;
+}
+
+/* 9. TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--surface-light);
+}
+
+caption {
+    color: var(--primary-light);
+    font-weight: 700;
+    padding: 15px;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: #0b2038;
+    color: var(--primary-light);
+    font-size: 0.9rem;
+}
+
+td {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+tbody tr:hover {
+    background: rgba(0, 170, 255, 0.08);
+}
+
+/* 10. ABOUT SECTION */
+address {
+    background: var(--surface-light);
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-style: normal;
+}
+
+address a {
+    color: var(--primary-light);
+    text-decoration: none;
+}
+
+/* 11. CONTACT FORM */
+form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    color: var(--text);
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #718096;
+}
+
+/* 12. BUTTONS */
+button {
+    padding: 13px 23px;
+    margin: 20px 10px 0 0;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #06111f;
+    font-size: 0.9rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 170, 255, 0.25);
+}
+
+button[type="reset"] {
+    background: var(--surface-light);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+button[type="reset"]:hover {
+    background: #263852;
+}
+
+/* 13. FOOTER */
+body > footer {
+    background: #050912;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 35px 20px;
+    color: var(--text-muted);
+}
+
+body > footer p {
+    margin-bottom: 15px;
+}
+
+body > footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+body > footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+body > footer a:hover {
+    color: white;
+}
+
+/* 14. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 5%;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    main {
+        width: 90%;
+        margin: 35px auto;
+    }
+
+    section > h2 {
+        font-size: 1.6rem;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    section > h2 {
+        font-size: 1.35rem;
+    }
+
+    article h3 {
+        font-size: 1.1rem;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
